@@ -9,7 +9,7 @@ This script supports two modes:
 1. SRC Validation: Tests commands and captures outputs (no expected_stdout/stderr)
 2. DST Contract Validation: Tests commands and validates outputs match expected
 
-Generated at: 2026-03-03T10:53:15.201078+00:00
+Generated at: 2026-03-03T10:54:15.494310+00:00
 Project: lethimcook-0303
 Milestone: 2
 """
@@ -55,7 +55,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_no_args_shows_usage",
         "category": "HELP_OUTPUT",
         "description": "Running CLI with no arguments shows usage information and exits with code 1",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [],
         "expected_exit_code": 1,
@@ -67,7 +67,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_no_args_shows_title",
         "category": "HELP_OUTPUT",
         "description": "Running CLI with no arguments shows the LetHimCook title",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [],
         "expected_exit_code": 1,
@@ -79,7 +79,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_basic_volume_cups_to_ml",
         "category": "HAPPY_PATH",
         "description": "Convert 2 cups to ml using basic 'X unit to unit' pattern",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "2",
@@ -96,7 +96,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_convert_pattern_weight",
         "category": "HAPPY_PATH",
         "description": "Convert 1 pound to grams using 'convert X unit to unit' pattern",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "convert",
@@ -114,7 +114,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_how_many_pattern",
         "category": "HAPPY_PATH",
         "description": "Convert using 'how many unit in X unit' pattern",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "how",
@@ -133,7 +133,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_temperature_conversion",
         "category": "HAPPY_PATH",
         "description": "Convert 350 fahrenheit to celsius",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "350",
@@ -150,7 +150,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_decimal_value_conversion",
         "category": "HAPPY_PATH",
         "description": "Convert 1.5 cups to ml with decimal input",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "1.5",
@@ -167,7 +167,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_gallon_to_liter",
         "category": "HAPPY_PATH",
         "description": "Convert 1 gallon to liter",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "1",
@@ -184,7 +184,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_error_unparseable_input",
         "category": "ERROR_HANDLING",
         "description": "Unparseable input produces error message and exit code 1",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "this",
@@ -200,7 +200,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_error_unknown_unit",
         "category": "ERROR_HANDLING",
         "description": "Unknown unit produces error message and exit code 1",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "2",
@@ -217,7 +217,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
         "name": "test_error_incompatible_units",
         "category": "ERROR_HANDLING",
         "description": "Incompatible units (volume to weight) produces error and exit code 1",
-        "command": "./lethimcook",
+        "command": "./lhc",
         "subcommand": "",
         "args": [
             "2",
@@ -233,7 +233,7 @@ TEST_CASES = resolve_env_placeholders(json.loads(r'''[
 ]'''))
 
 # CLI binary/entry point
-CLI_COMMAND = "./lethimcook"
+CLI_COMMAND = "./lhc"
 
 # Working directory for CLI execution
 WORKING_DIR = "."
