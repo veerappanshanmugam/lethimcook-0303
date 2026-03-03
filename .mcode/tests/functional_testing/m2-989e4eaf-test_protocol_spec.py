@@ -9,7 +9,7 @@ This script supports two modes:
 1. SRC Validation: Tests commands and captures outputs (no expected_stdout/stderr)
 2. DST Contract Validation: Tests commands and validates outputs match expected
 
-Generated at: 2026-03-03T10:48:32.135977+00:00
+Generated at: 2026-03-03T10:49:25.172605+00:00
 Project: lethimcook-0303
 Milestone: 2
 """
